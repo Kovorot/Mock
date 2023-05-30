@@ -9,6 +9,7 @@ import ru.netology.sender.MessageSender;
 import ru.netology.sender.MessageSenderImpl;
 
 public class Main {
+    //"172.123.12.19"
 
     //Тестовый пример
     public static void main(String[] args) {
@@ -17,7 +18,7 @@ public class Main {
         MessageSender messageSender = new MessageSenderImpl(geoService, localizationService);
 
         Map<String, String> headers = new HashMap<String, String>();
-        headers.put(MessageSenderImpl.IP_ADDRESS_HEADER, "172.123.12.19");
+        headers.put(MessageSenderImpl.IP_ADDRESS_HEADER, null);
         messageSender.send(headers);
     }
 }
